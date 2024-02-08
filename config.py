@@ -1,3 +1,3 @@
 token = ""
 prefix = "/"
-All_commands_role = "Hoster"
+all_commands_role = "Hoster"

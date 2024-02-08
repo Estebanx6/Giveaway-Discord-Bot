@@ -22,7 +22,7 @@ participants = []
 @bot.event
 async def on_reaction_add(reaction, user):
     if user.id != bot.user.id:
-        role = (discord.utils.get(user.roles, name=config.All_commands_role))
+        role = (discord.utils.get(user.roles, name=config.all_commands_role))
         if role:
             if message_warn and reaction.message.id == message_warn.id:   
                 if reaction.emoji == "✅":
@@ -58,7 +58,7 @@ async def giveaway(ctx, award=None, winners=None):
     global num_winners
 
     await ctx.message.delete()
-    role = (discord.utils.get(ctx.author.roles, name=config.All_commands_role))
+    role = (discord.utils.get(ctx.author.roles, name=config.all_commands_role))
     if role:
         if can_create == True:
             try:
@@ -98,7 +98,7 @@ def setcreate():
 @bot.command()
 async def sort(ctx):
     await ctx.message.delete()
-    role = (discord.utils.get(ctx.author.roles, name=config.All_commands_role))
+    role = (discord.utils.get(ctx.author.roles, name=config.all_commands_role))
     if role:
         if can_create == False:
             for i in range(num_winners):
